@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Options</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to My Profile</h1>
+    <p>Please select an option:</p>
+    <div class="buttons">
+      <button onclick="showContent('biodata')">View Biodata</button>
+      <button onclick="showContent('resume')">View Resume</button>
+    </div>
+    <div id="biodata" class="content" style="display: none;">
+      <h2>Biodata</h2>
+      <p>Name: Varsha R</p>
+      <p>Age: 19</p>
+      <p>Date-of-Birth :20-02-2005</p>
+      <p>Gender:female<p>
+      <p>Engineering Stream: Computer Science</p>
+      <p>Year: 3rd Year</p>
+    </div>
+    <div id="resume" class="content" style="display: none;">
+      <h2>Resume</h2>
+      <p><strong>Objective:</strong> To secure a challenging position in a reputed organization to expand my learnings, knowledge, and skills.</p>
+      <p><strong>Skills:</strong> Programming in C, Java, Python | Web Development | Problem Solving</p>
+      <p><strong>Education:</strong> B.Tech in Computer Science, SJB Institute Of Technology </p>
+      <p><strong>Projects:</strong> Student Attendance Management(a dbms mini project),Hotel Management System(java project),Fashion Recomendation System(using machine learning)</p>
+      <p><strong>Hobbies:</strong> Reading Books,Painting,watching web series etc.</p>
+    </div>
+  </div>
+
+  <script>
+    function showContent(sectionId) {
+      const sections = document.querySelectorAll('.content');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
